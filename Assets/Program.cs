@@ -25,6 +25,10 @@ public class HealthSystem
     public void TakeDamage(int damage)
     {
         // Implement damage logic
+        if (health < 0)
+        {
+            Revive();
+        }
     }
 
     public void Heal(int hp)
