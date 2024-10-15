@@ -43,6 +43,7 @@ public class HealthSystem
         if (health < 0 && lives < 0)
         {
             health += 100;
+            shield += 100;
             lives = lives - 1;
 
         }
