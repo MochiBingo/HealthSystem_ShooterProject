@@ -40,12 +40,20 @@ public class HealthSystem
     public void Revive()
     {
         // Implement revive logic
+        if (health < 0 && lives < 0)
+        {
+            health += 100;
+            lives = lives - 1;
+
+        }
     }
 
     public void ResetGame()
     {
         // Reset all variables to default values
         health = 100;
+        shield = 100;
+        lives = 3;
     }
 
     // Optional XP system methods
