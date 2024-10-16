@@ -9,6 +9,7 @@ public class HealthUI : MonoBehaviour
     public void Awake()
     {
         textmeshpro = GetComponent<TextMeshProUGUI>();
-        instance.textmeshpro = "Health";
+        instance = this;
+
     }
 }
