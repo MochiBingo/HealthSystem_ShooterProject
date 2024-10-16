@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : Actor {
     public static List<Enemy> allEnemies = new List<Enemy>();
-
     public List<GameObject> itemDrops = new List<GameObject>();
     float shootInterval = 1.5f;
 

@@ -24,6 +24,7 @@ public class HealthSystem
 
     public void TakeDamage(int damage)
     {
+        health = health - damage;
         // Implement damage logic
         if (health < 0)
         {
@@ -44,7 +45,7 @@ public class HealthSystem
     public void Revive()
     {
         // Implement revive logic
-        if (health < 0 && lives < 0)
+        if (health <= 0 && lives > 0)
         {
             health += 100;
             shield += 100;
