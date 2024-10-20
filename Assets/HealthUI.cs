@@ -4,12 +4,12 @@ using UnityEngine;
 using TMPro;
 public class HealthUI : MonoBehaviour
 {
-    public TextMeshProUGUI textmeshpro;
+    public TextMeshProUGUI UI;
     public static HealthUI instance;
     public void Awake()
     {
-        textmeshpro = GetComponent<TextMeshProUGUI>();
+        UI = GetComponent<TextMeshProUGUI>();
         instance = this;
-
+        UI.text = ("test?");
     }
 }

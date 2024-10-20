@@ -7,8 +7,15 @@ public class Enemy : Actor {
     public List<GameObject> itemDrops = new List<GameObject>();
     float shootInterval = 1.5f;
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         allEnemies.Add(this);
+        Invoke("SetLivesToZero", 0.1f);
+    }
+
+    public void SetLivesToZero()
+    {
+        healthSystem.lives = 0;
     }
 
     private void OnDisable() {

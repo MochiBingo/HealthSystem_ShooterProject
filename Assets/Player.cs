@@ -21,13 +21,12 @@ public class Player : Actor {
 
     public override void Update() {
         base.Update();
-        if (lastCheckedHealth != healthSystem.health || lastCheckedLevel != healthSystem.level || lastCheckedXp != healthSystem.xp || lastCheckedShield != healthSystem.shield )
+        if (lastCheckedHealth != healthSystem.health || lastCheckedLevel != healthSystem.level || lastCheckedXp != healthSystem.xp)
         {
-            HealthUI.instance.textmeshpro.text = healthSystem.ShowHUD();
+            HealthUI.instance.UI.text = healthSystem.ShowHUD();
             lastCheckedHealth = healthSystem.health;
             lastCheckedLevel = healthSystem.level;
             lastCheckedXp = healthSystem.xp;
-            lastCheckedShield = healhSystem.shield;
         }
     }
 
