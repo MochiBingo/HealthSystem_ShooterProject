@@ -10,6 +10,5 @@ public class HealthUI : MonoBehaviour
     {
         UI = GetComponent<TextMeshProUGUI>();
         instance = this;
-        UI.text = ("test?");
     }
 }

@@ -11,6 +11,7 @@ public class Player : Actor {
 
     public void Awake() {
         instance = this;
+        HealthSystem.AllUnitTests();
     }
 
     public override void Die()
@@ -21,12 +22,13 @@ public class Player : Actor {
 
     public override void Update() {
         base.Update();
-        if (lastCheckedHealth != healthSystem.health || lastCheckedLevel != healthSystem.level || lastCheckedXp != healthSystem.xp)
+        if (lastCheckedHealth != healthSystem.health || lastCheckedLevel != healthSystem.level || lastCheckedXp != healthSystem.xp || lastCheckedShield != healthSystem.shield)
         {
             HealthUI.instance.UI.text = healthSystem.ShowHUD();
             lastCheckedHealth = healthSystem.health;
             lastCheckedLevel = healthSystem.level;
             lastCheckedXp = healthSystem.xp;
+            lastCheckedShield = healthSystem.shield;
         }
     }
 

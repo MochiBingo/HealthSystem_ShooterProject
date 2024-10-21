@@ -49,6 +49,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 129
   speed: 4
+  damageAmount: 50
+  lifeTime: 20
 --- !u!1 &7953317539810835187
 GameObject:
   m_ObjectHideFlags: 0
